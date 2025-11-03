@@ -205,13 +205,13 @@
 /* ===== UNLAYERED: protect DDC chrome (wins over layered rules) ===== */
 
 header, .ddc-header, .ddc-nav, .site-header,
-footer, .ddc-footer, .site-footer,
--[class^="ddc-icon"], [class*=" ddc-icon"] {
-+[class^="ddc-icon"], [class*=" ddc-icon"] {
+footer, .ddc-footer, .site-footer {
+  /* Prefer original, unlayered DDC values */
   font-family: revert-layer !important;
   font-weight: revert-layer !important;
   font-style: revert-layer !important;
 
+  /* Fallback for browsers without cascade layers */
   font-family: revert !important;
   font-weight: revert !important;
   font-style: revert !important;
