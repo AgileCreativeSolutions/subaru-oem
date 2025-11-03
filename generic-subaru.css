@@ -1,41 +1,6 @@
-/* OEM Font Embed */
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16008,16009,15981,15980,15991,15993,15996');
-
-
-@font-face {
-font-family: 'Helvetica Neue Regular';
-font-style: normal;
-font-weight: 300;
-src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Light.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica Neue Medium';
-font-style: normal;
-font-weight: 500;
-src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Medium.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica Neue Bold';
-font-style: normal;
-font-weight: 700;
-src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Bold.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica Neue Black';
-font-style: normal;
-font-weight: 900;
-src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Black.woff') format('woff');
-}
-/* OEM Font Embed */
-
-
-
 /* OEM Font */
 .acs-wrapper, .acs-oem-brand { 
-font-family: "Helvetica Neue Regular", Helvetica, Arial, sans-serif;
+font-family: Helvetica, Arial, sans-serif;
 font-weight: 400;
 }
 /* OEM Font */
@@ -44,7 +9,7 @@ font-weight: 400;
 
 /* Heading Tags */
 .acs-h1, .acs-h2, .acs-h3, .acs-h4, .acs-h5, .acs-h6 {
-font-family: "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+font-family: Helvetica, Arial, sans-serif;
 font-weight: 700;
 line-height: 1.2;
 }
@@ -104,42 +69,43 @@ font-size: 1.2rem !important;
 
 /* OEM Font Variables */
 .subaru-regular {
-font-family: "Helvetica Neue Regular" !important;
-font-weight: 300 !important;
+font-family: Helvetica, Arial, sans-serif !important;
+font-weight: 400 !important; /* regular weight is 400 */
 }
 
 .subaru-regular-italic {
-font-family: "Helvetica Neue Regular Italic" !important;
-font-weight: 300 !important;
-font-style: italic !important
+font-family: Helvetica, Arial, sans-serif !important;
+font-weight: 400 !important;
+font-style: italic !important;
 }
 
 .subaru-medium {
-font-family: "Helvetica Neue Medium" !important;
-font-weight: 300 !important;
+font-family: Helvetica, Arial, sans-serif !important;
+font-weight: 500 !important; /* 500 = "medium" */
 }
 
 .subaru-medium-italic {
-font-family: "Helvetica Neue Medium Italic" !important;
-font-weight: 300 !important;
-font-style: italic !important
+font-family: Helvetica, Arial, sans-serif !important;
+font-weight: 500 !important;
+font-style: italic !important;
 }
 
 .subaru-bold {
-font-family: "Helvetica Neue Bold" !important;
+font-family: Helvetica, Arial, sans-serif !important;
 font-weight: 700 !important;
 }
 
 .subaru-bold-italic {
-font-family: "Helvetica Neue Bold Italic" !important;
+font-family: Helvetica, Arial, sans-serif !important;
 font-weight: 700 !important;
-font-style: italic !important
+font-style: italic !important;
 }
 
 .subaru-black {
-font-family: "Helvetica Neue Black" !important;
+font-family: Helvetica, Arial, sans-serif !important;
 font-weight: 900 !important;
 }
+
 
 .acs-bold {
 font-family: var(--bold-font);   
@@ -276,7 +242,7 @@ background-color: rgba(26,33,39, var(--acs-bg-opacity))
 
 /* Link Accent */
 .acs-link-accent, .acs-link-accent2 {
-text-decoration: none;
+text-decoration: none !important;
 font-family: var(--bold-font);   
 transition: all 0.2s ease-in-out 0s;
 }
@@ -317,7 +283,7 @@ min-width: 150px;
 padding: 16.606px 25px 12.606px;
 overflow-wrap: break-word;
 text-align: center;
-text-decoration: none;
+text-decoration: none !important;
 transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
 
@@ -342,7 +308,7 @@ min-width: 150px;
 padding: 16.606px 25px 12.606px;
 overflow-wrap: break-word;
 text-align: center;
-text-decoration: none;
+text-decoration: none !important;
 transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
 
@@ -367,7 +333,7 @@ min-width: 150px;
 padding: 16.606px 25px 12.606px;
 overflow-wrap: break-word;
 text-align: center;
-text-decoration: none;
+text-decoration: none !important;
 transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
 
@@ -392,7 +358,7 @@ min-width: 150px;
 padding: 16.606px 25px 12.606px;
 overflow-wrap: break-word;
 text-align: center;
-text-decoration: none;
+text-decoration: none !important;
 transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
 
