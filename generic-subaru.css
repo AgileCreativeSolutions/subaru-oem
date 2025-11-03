@@ -1,47 +1,25 @@
-/* Subaru OEM stylesheet — layered so DDC's unlayered header/footer win */
-
 /* ===== LAYERED: your styles ===== */
 @layer brand {
+  :root { --brand-sans: Helvetica, Arial, sans-serif; }
 
-/* OEM Font */
-.acs-wrapper, .acs-oem-brand { 
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-/* OEM Font */
+  /* ⛔️ Remove any global font like:
+     html, body { font-family: var(--brand-sans); }
+     * { font-family: var(--brand-sans); }
+  */
 
-/* Heading Tags */
-.acs-h1, .acs-h2, .acs-h3, .acs-h4, .acs-h5, .acs-h6 {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
+  /* ✅ Namespace your typography to ONLY your components */
+  :where([class^="acs-"], [class*=" acs-"]) {
+    font-family: var(--brand-sans);
+  }
 
-.acs-h1 { font-size: 2rem; }
-.acs-h2 { font-size: 1.8rem; }
-.acs-h3 { font-size: 1.6rem; }
-.acs-h4 { font-size: 1.4rem; }
-.acs-h5 { font-size: 1.2rem; }
-.acs-h6 { font-size: 1.1rem; }
-
-@media (min-width: 575px) {
-  .acs-h1 { font-size: 2.5rem !important; }
-  .acs-h2 { font-size: 2.2rem !important; }
-  .acs-h3 { font-size: 1.8rem !important; }
-  .acs-h4 { font-size: 1.6rem !important; }
-  .acs-h5 { font-size: 1.4rem !important; }
-  .acs-h6 { font-size: 1.2rem !important; }
-}
-/* Heading Tags */
-
-/* OEM Font Variables */
-.subaru-regular        { font-family: Helvetica, Arial, sans-serif; font-weight: 400; }
-.subaru-regular-italic { font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-style: italic; }
-.subaru-medium         { font-family: Helvetica, Arial, sans-serif; font-weight: 500; }
-.subaru-medium-italic  { font-family: Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; }
-.subaru-bold           { font-family: Helvetica, Arial, sans-serif; font-weight: 700; }
-.subaru-bold-italic    { font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-style: italic; }
-.subaru-black          { font-family: Helvetica, Arial, sans-serif; font-weight: 900; }
+  /* Your utilities (no !important needed) */
+  .subaru-regular        { font-family: var(--brand-sans); font-weight: 400; }
+  .subaru-regular-italic { font-family: var(--brand-sans); font-weight: 400; font-style: italic; }
+  .subaru-medium         { font-family: var(--brand-sans); font-weight: 600; }
+  .subaru-medium-italic  { font-family: var(--brand-sans); font-weight: 600; font-style: italic; }
+  .subaru-bold           { font-family: var(--brand-sans); font-weight: 700; }
+  .subaru-bold-italic    { font-family: var(--brand-sans); font-weight: 700; font-style: italic; }
+  .subaru-black          { font-family: var(--brand-sans); font-weight: 700; } /* map 900→700 for safety */
 
 .acs-bold {
   font-family: var(--bold-font);   
@@ -202,17 +180,34 @@
 } /* end @layer brand */
 
 
-/* ===== UNLAYERED: protect DDC chrome (wins over layered rules) ===== */
-
-header, .ddc-header, .ddc-nav, .site-header,
-footer, .ddc-footer, .site-footer {
-  /* Prefer original, unlayered DDC values */
+/* ===== UNLAYERED: seal DDC chrome (typography only) ===== */
+/* Don’t nuke layout with `all:`; just reset font-related props */
+:is(header, .ddc-header, .site-header, .global-nav, .ddc-nav,
+    footer, .ddc-footer, .site-footer) {
   font-family: revert-layer !important;
   font-weight: revert-layer !important;
   font-style: revert-layer !important;
+  line-height: revert-layer !important;
+  letter-spacing: revert-layer !important;
+  text-transform: revert-layer !important;
 
-  /* Fallback for browsers without cascade layers */
+  /* Fallback for older browsers */
   font-family: revert !important;
   font-weight: revert !important;
   font-style: revert !important;
+  line-height: revert !important;
+  letter-spacing: revert !important;
+  text-transform: revert !important;
 }
+
+/* Font Awesome guard (don’t override its font) */
+.fa, .fas, .far, .fal, .fab,
+[class^="fa-"], [class*=" fa-"] {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Only if you still see broken icons, hard-set families:
+.fas, .fa-solid { font-family: "Font Awesome 6 Free","Font Awesome 5 Free" !important; }
+.far, .fa-regular { font-family: "Font Awesome 6 Free","Font Awesome 5 Free" !important; }
+.fab, .fa-brands  { font-family: "Font Awesome 6 Brands","Font Awesome 5 Brands" !important; }
+*/
