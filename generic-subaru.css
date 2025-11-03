@@ -1,370 +1,220 @@
+/* Subaru OEM stylesheet — layered so DDC's unlayered header/footer win */
+
+/* ===== LAYERED: your styles ===== */
+@layer brand {
+
 /* OEM Font */
 .acs-wrapper, .acs-oem-brand { 
-font-family: Helvetica, Arial, sans-serif;
-font-weight: 400;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 /* OEM Font */
-
-
 
 /* Heading Tags */
 .acs-h1, .acs-h2, .acs-h3, .acs-h4, .acs-h5, .acs-h6 {
-font-family: Helvetica, Arial, sans-serif;
-font-weight: 700;
-line-height: 1.2;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.acs-h1 {
-font-size: 2rem;
-}
-
-.acs-h2 {
-font-size: 1.8rem;
-}
-
-.acs-h3 {
-font-size: 1.6rem;
-}
-
-.acs-h4 {
-font-size: 1.4rem;
-}
-
-.acs-h5 {
-font-size: 1.2rem;
-}
-
-.acs-h6 {
-font-size: 1.1rem;
-}
+.acs-h1 { font-size: 2rem; }
+.acs-h2 { font-size: 1.8rem; }
+.acs-h3 { font-size: 1.6rem; }
+.acs-h4 { font-size: 1.4rem; }
+.acs-h5 { font-size: 1.2rem; }
+.acs-h6 { font-size: 1.1rem; }
 
 @media (min-width: 575px) {
-.acs-h1 {
-font-size: 2.5rem !important;
-}
-
-.acs-h2 {
-font-size: 2.2rem !important;
-}
-
-.acs-h3 {
-font-size: 1.8rem !important;
-}
-
-.acs-h4 {
-font-size: 1.6rem !important;
-}
-
-.acs-h5 {
-font-size: 1.4rem !important;
-}
-
-.acs-h6 {
-font-size: 1.2rem !important;
-}
+  .acs-h1 { font-size: 2.5rem !important; }
+  .acs-h2 { font-size: 2.2rem !important; }
+  .acs-h3 { font-size: 1.8rem !important; }
+  .acs-h4 { font-size: 1.6rem !important; }
+  .acs-h5 { font-size: 1.4rem !important; }
+  .acs-h6 { font-size: 1.2rem !important; }
 }
 /* Heading Tags */
 
-
-
 /* OEM Font Variables */
-.subaru-regular {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 400 !important; /* regular weight is 400 */
-}
-
-.subaru-regular-italic {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 400 !important;
-font-style: italic !important;
-}
-
-.subaru-medium {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 500 !important; /* 500 = "medium" */
-}
-
-.subaru-medium-italic {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 500 !important;
-font-style: italic !important;
-}
-
-.subaru-bold {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 700 !important;
-}
-
-.subaru-bold-italic {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 700 !important;
-font-style: italic !important;
-}
-
-.subaru-black {
-font-family: Helvetica, Arial, sans-serif !important;
-font-weight: 900 !important;
-}
-
+.subaru-regular        { font-family: Helvetica, Arial, sans-serif; font-weight: 400; }
+.subaru-regular-italic { font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-style: italic; }
+.subaru-medium         { font-family: Helvetica, Arial, sans-serif; font-weight: 500; }
+.subaru-medium-italic  { font-family: Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; }
+.subaru-bold           { font-family: Helvetica, Arial, sans-serif; font-weight: 700; }
+.subaru-bold-italic    { font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-style: italic; }
+.subaru-black          { font-family: Helvetica, Arial, sans-serif; font-weight: 900; }
 
 .acs-bold {
-font-family: var(--bold-font);   
-font-weight: 700;
+  font-family: var(--bold-font);   
+  font-weight: 700;
 }
 /* OEM Font Variables */
-
-
 
 /* Variables */
 .acs-wrapper {
---accent: #002c5f;
---accent2: #005baa;
---accent3: #1971d4;
---black: #000000;
---white: #ffffff;
---gray: #f5f5f5;
---gray2: #eeeeee;
---gray3: #cccccc;
---dark: #2d2d2d;
---dark2: #1d252c;
---dark3: #1a2127;
---bold-font: "subaru-bold", sans-serif;
+  --accent: #002c5f;
+  --accent2: #005baa;
+  --accent3: #1971d4;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --gray2: #eeeeee;
+  --gray3: #cccccc;
+  --dark: #2d2d2d;
+  --dark2: #1d252c;
+  --dark3: #1a2127;
+  --bold-font: "subaru-bold", sans-serif;
 }
 /* Variables */
 
-
-
 /* Text Colors */
-.acs-accent {
-color: var(--accent);
-}
-
-.acs-accent2 {
-color: var(--accent2);
-}
-
-.acs-accent3 {
-color: var(--accent3);
-}
-
-.acs-white {
-color: var(--white);
-}
-
-.acs-black {
-color: var(--black);
-}
-
-.acs-gray {
-color: var(--gray);
-}
-
-.acs-gray2 {
-color: var(--gray2);
-}
-
-.acs-gray3 {
-color: var(--gray3);
-}
-
-.acs-dark {
-color: var(--dark);
-}
-
-.acs-dark2 {
-color: var(--dark2);
-}
-
-.acs-dark3 {
-color: var(--dark3);
-}
+.acs-accent  { color: var(--accent); }
+.acs-accent2 { color: var(--accent2); }
+.acs-accent3 { color: var(--accent3); }
+.acs-white   { color: var(--white); }
+.acs-black   { color: var(--black); }
+.acs-gray    { color: var(--gray); }
+.acs-gray2   { color: var(--gray2); }
+.acs-gray3   { color: var(--gray3); }
+.acs-dark    { color: var(--dark); }
+.acs-dark2   { color: var(--dark2); }
+.acs-dark3   { color: var(--dark3); }
 /* Text Colors */
 
-
-
 /* Background Colors */
-.acs-bg-accent {
---acs-bg-opacity: 1;
-background-color: var(--accent);
-background-color: rgba(0,44,95, var(--acs-bg-opacity));
-}
-
-.acs-bg-accent2 {
---acs-bg-opacity: 1;
-background-color: var(--accent2);
-background-color: rgba(0,91,170, var(--acs-bg-opacity));
-}
-
-.acs-bg-accent3 {
---acs-bg-opacity: 1;
-background-color: var(--accent3);
-background-color: rgba(25,113,212, var(--acs-bg-opacity));
-}
-
-.acs-bg-gray {
---acs-bg-opacity: 1;
-background-color: var(--gray);
-background-color: rgba(245,245,245, var(--acs-bg-opacity))
-}
-
-.acs-bg-gray2 {
---acs-bg-opacity: 1;
-background-color: var(--gray2);
-background-color: rgba(238,238,238, var(--acs-bg-opacity))
-}
-
-.acs-bg-gray3 {
---acs-bg-opacity: 1;
-background-color: var(--gray3);
-background-color: rgba(238,238,238, var(--acs-bg-opacity))
-}
-
-.acs-bg-dark {
---acs-bg-opacity: 1;
-background-color: var(--dark);
-background-color: rgba(45,45,45, var(--acs-bg-opacity))
-}
-
-.acs-bg-dark2 {
---acs-bg-opacity: 1;
-background-color: var(--dark2);
-background-color: rgba(29,37,44, var(--acs-bg-opacity))
-}
-
-.acs-bg-dark3 {
---acs-bg-opacity: 1;
-background-color: var(--dark3);
-background-color: rgba(26,33,39, var(--acs-bg-opacity))
-}
+.acs-bg-accent  { --acs-bg-opacity: 1; background-color: var(--accent);  background-color: rgba(0,44,95, var(--acs-bg-opacity)); }
+.acs-bg-accent2 { --acs-bg-opacity: 1; background-color: var(--accent2); background-color: rgba(0,91,170, var(--acs-bg-opacity)); }
+.acs-bg-accent3 { --acs-bg-opacity: 1; background-color: var(--accent3); background-color: rgba(25,113,212, var(--acs-bg-opacity)); }
+.acs-bg-gray    { --acs-bg-opacity: 1; background-color: var(--gray);   background-color: rgba(245,245,245, var(--acs-bg-opacity)); }
+.acs-bg-gray2   { --acs-bg-opacity: 1; background-color: var(--gray2);  background-color: rgba(238,238,238, var(--acs-bg-opacity)); }
+.acs-bg-gray3   { --acs-bg-opacity: 1; background-color: var(--gray3);  background-color: rgba(238,238,238, var(--acs-bg-opacity)); }
+.acs-bg-dark    { --acs-bg-opacity: 1; background-color: var(--dark);   background-color: rgba(45,45,45, var(--acs-bg-opacity)); }
+.acs-bg-dark2   { --acs-bg-opacity: 1; background-color: var(--dark2);  background-color: rgba(29,37,44, var(--acs-bg-opacity)); }
+.acs-bg-dark3   { --acs-bg-opacity: 1; background-color: var(--dark3);  background-color: rgba(26,33,39, var(--acs-bg-opacity)); }
 /* Background Colors */
-
-
 
 /* Link Accent */
 .acs-link-accent, .acs-link-accent2 {
-text-decoration: none !important;
-font-family: var(--bold-font);   
-transition: all 0.2s ease-in-out 0s;
+  text-decoration: none !important;
+  font-family: var(--bold-font);   
+  transition: all 0.2s ease-in-out 0s;
 }
 
-.acs-link-accent {
-color: var(--accent3) !important;
-}
-
-.acs-link-accent:hover {
-color: var(--dark3) !important; 
-}
-
-.acs-link-accent2 {
-color: var(--accent3) !important;
-}
-
-.acs-link-accent2:hover {
-color: var(--white) !important;
-}
+.acs-link-accent  { color: var(--accent3) !important; }
+.acs-link-accent:hover { color: var(--dark3) !important; }
+.acs-link-accent2 { color: var(--accent3) !important; }
+.acs-link-accent2:hover { color: var(--white) !important; }
 /* Link Accent */
 
-
-
-
 /* BUTTONS: START */
-/* Button 1 */
 .acs-button {
-background-color: var(--accent3);
-border-color: var(--accent3);
-color: var(--white);
-border: .05882rem solid transparent;
-border-radius: 5px;
-display: inline-block;
-font-size: .82353rem;
-line-height: 1rem;
-max-width: 350px;
-min-width: 150px;
-padding: 16.606px 25px 12.606px;
-overflow-wrap: break-word;
-text-align: center;
-text-decoration: none !important;
-transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
+  background-color: var(--accent3);
+  border-color: var(--accent3);
+  color: var(--white);
+  border: .05882rem solid transparent;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: .82353rem;
+  line-height: 1rem;
+  max-width: 350px;
+  min-width: 150px;
+  padding: 16.606px 25px 12.606px;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-decoration: none !important;
+  transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
-
 .acs-button:hover {
-background-color: var(--dark3);
-border-color: var(--dark3);
-color: var(--white);
+  background-color: var(--dark3);
+  border-color: var(--dark3);
+  color: var(--white);
 }
 
-/* Button 2 */
 .acs-button2 {
-background-color: var(--accent3);
-border-color: var(--accent3);
-color: var(--white);
-border: .05882rem solid transparent;
-border-radius: 5px;
-display: inline-block;
-font-size: .82353rem;
-line-height: 1rem;
-max-width: 350px;
-min-width: 150px;
-padding: 16.606px 25px 12.606px;
-overflow-wrap: break-word;
-text-align: center;
-text-decoration: none !important;
-transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
+  background-color: var(--accent3);
+  border-color: var(--accent3);
+  color: var(--white);
+  border: .05882rem solid transparent;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: .82353rem;
+  line-height: 1rem;
+  max-width: 350px;
+  min-width: 150px;
+  padding: 16.606px 25px 12.606px;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-decoration: none !important;
+  transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
-
 .acs-button2:hover {
-background-color: var(--white);
-border-color: var(--white);
-color: var(--dark3);
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--dark3);
 }
 
-/* Button 3 */
 .acs-button3 {
-background-color: transparent;
-border-color: var(--accent3);
-color: var(--accent3);
-border: .05882rem solid;
-border-radius: 5px;
-display: inline-block;
-font-size: .82353rem;
-line-height: 1rem;
-max-width: 350px;
-min-width: 150px;
-padding: 16.606px 25px 12.606px;
-overflow-wrap: break-word;
-text-align: center;
-text-decoration: none !important;
-transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
+  background-color: transparent;
+  border-color: var(--accent3);
+  color: var(--accent3);
+  border: .05882rem solid;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: .82353rem;
+  line-height: 1rem;
+  max-width: 350px;
+  min-width: 150px;
+  padding: 16.606px 25px 12.606px;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-decoration: none !important;
+  transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
-
 .acs-button3:hover {
-background-color: transparent;
-border-color: var(--dark3);
-color: var(--dark3);
+  background-color: transparent;
+  border-color: var(--dark3);
+  color: var(--dark3);
 }
 
-/* Button 4 */
 .acs-button4 {
-background-color: var(--white);
-border-color: var(--white);
-color: var(--accent3);
-border: .05882rem solid;
-border-radius: 5px;
-display: inline-block;
-font-size: .82353rem;
-line-height: 1rem;
-max-width: 350px;
-min-width: 150px;
-padding: 16.606px 25px 12.606px;
-overflow-wrap: break-word;
-text-align: center;
-text-decoration: none !important;
-transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--accent3);
+  border: .05882rem solid;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: .82353rem;
+  line-height: 1rem;
+  max-width: 350px;
+  min-width: 150px;
+  padding: 16.606px 25px 12.606px;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-decoration: none !important;
+  transition: height .3s,width .3s,background .3s,border .3s,color .3s,margin .3s,box-shadow .3s;
 }
-
 .acs-button4:hover {
-background-color: var(--gray);
-border-color: var(--dark3);
-color: var(--dark3);
+  background-color: var(--gray);
+  border-color: var(--dark3);
+  color: var(--dark3);
 }
 /* BUTTONS: END */
+
+} /* end @layer brand */
+
+
+/* ===== UNLAYERED: protect DDC chrome (wins over layered rules) ===== */
+
+header, .ddc-header, .ddc-nav, .site-header,
+footer, .ddc-footer, .site-footer,
+[class^="ddc-icon"], [class*=" ddc-icon"],
+.fa, [class*=" fa-"] {
+  /* Prefer original, unlayered DDC values */
+  font-family: revert-layer !important;
+  font-weight: revert-layer !important;
+  font-style: revert-layer !important;
+
+  /* Fallback for browsers without cascade layers */
+  font-family: revert !important;
+  font-weight: revert !important;
+  font-style: revert !important;
+}
