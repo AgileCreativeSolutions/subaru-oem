@@ -206,14 +206,13 @@
 
 header, .ddc-header, .ddc-nav, .site-header,
 footer, .ddc-footer, .site-footer,
-[class^="ddc-icon"], [class*=" ddc-icon"],
-.fa, [class*=" fa-"] {
-  /* Prefer original, unlayered DDC values */
+-[class^="ddc-icon"], [class*=" ddc-icon"],
+-.fa, [class*=" fa-"] {
++[class^="ddc-icon"], [class*=" ddc-icon"] {
   font-family: revert-layer !important;
   font-weight: revert-layer !important;
   font-style: revert-layer !important;
 
-  /* Fallback for browsers without cascade layers */
   font-family: revert !important;
   font-weight: revert !important;
   font-style: revert !important;
