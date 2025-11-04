@@ -1,10 +1,33 @@
 /* OEM Font Embed */
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16008,16009,15981,15980,15991,15993,15996');
+
+
 @font-face {
-font-family: ddc-icons;
-src: url(/static/distcache/v9/variations/oem-subaru/0001/v1/fonts/merged/font.e52edb85a1b3c11f0dc9ee4353cda283.woff2) format("woff2"), url(/static/distcache/v9/variations/oem-subaru/0001/v1/fonts/merged/font.e52edb85a1b3c11f0dc9ee4353cda283.woff) format("woff"), url(/static/distcache/v9/variations/oem-subaru/0001/v1/fonts/merged/font.e52edb85a1b3c11f0dc9ee4353cda283.ttf) format("truetype");
-font-weight: 400;
+font-family: 'Helvetica Neue Regular';
 font-style: normal;
-font-display:swap
+font-weight: 300;
+src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica Neue Medium';
+font-style: normal;
+font-weight: 500;
+src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Medium.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica Neue Bold';
+font-style: normal;
+font-weight: 700;
+src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Bold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica Neue Black';
+font-style: normal;
+font-weight: 900;
+src: url('https://fonts.cdnfonts.com/s/14188/HelveticaNeue-Black.woff') format('woff');
 }
 /* OEM Font Embed */
 
@@ -12,7 +35,7 @@ font-display:swap
 
 /* OEM Font */
 .acs-wrapper, .acs-oem-brand { 
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Helvetica Neue Regular", Helvetica, Arial, sans-serif;
 font-weight: 400;
 }
 /* OEM Font */
@@ -21,7 +44,7 @@ font-weight: 400;
 
 /* Heading Tags */
 .acs-h1, .acs-h2, .acs-h3, .acs-h4, .acs-h5, .acs-h6 {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
 font-weight: 700;
 line-height: 1.2;
 }
@@ -81,40 +104,40 @@ font-size: 1.2rem !important;
 
 /* OEM Font Variables */
 .subaru-regular {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: 400 !important; /* regular weight is 400 */
+font-family: "Helvetica Neue Regular" !important;
+font-weight: 300 !important;
 }
 
 .subaru-regular-italic {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: 400 !important;
-font-style: italic !important;
+font-family: "Helvetica Neue Regular Italic" !important;
+font-weight: 300 !important;
+font-style: italic !important
 }
 
 .subaru-medium {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: 500 !important; /* 500 = "medium" */
+font-family: "Helvetica Neue Medium" !important;
+font-weight: 300 !important;
 }
 
 .subaru-medium-italic {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: 500 !important;
-font-style: italic !important;
+font-family: "Helvetica Neue Medium Italic" !important;
+font-weight: 300 !important;
+font-style: italic !important
 }
 
 .subaru-bold {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Helvetica Neue Bold" !important;
 font-weight: 700 !important;
 }
 
 .subaru-bold-italic {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Helvetica Neue Bold Italic" !important;
 font-weight: 700 !important;
-font-style: italic !important;
+font-style: italic !important
 }
 
 .subaru-black {
-font-family: "DDC Heading Font Face", Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Helvetica Neue Black" !important;
 font-weight: 900 !important;
 }
 
